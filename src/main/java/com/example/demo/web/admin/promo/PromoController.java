@@ -5,4 +5,7 @@ package com.example.demo.web.admin.promo;
  * Контроллер где будут редактироватся блок промо акций
  */
 public class PromoController {
+    /**
+     * commit test
+     */
 }
