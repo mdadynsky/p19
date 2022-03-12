@@ -1,8 +1,9 @@
 <#import "/spring.ftl" as spring />
 
 <#macro layout>
-<html lang="ru">
+<html>
 <head>
+    <meta charset="utf-8">
     <title>Demo</title>
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
     <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
