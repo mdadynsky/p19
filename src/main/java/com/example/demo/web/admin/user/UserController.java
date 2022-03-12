@@ -10,4 +10,9 @@ public class UserController {
     public String showUserList() {
         return "admin/user/users";
     }
+
+    @GetMapping("/admin/user/edit")
+    public String showUserEdit() {
+        return "admin/user/users";
+    }
 }
