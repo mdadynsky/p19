@@ -11,4 +11,9 @@ public class IndexController {
         return "index";
     }
 
+    @GetMapping("/demo1")
+    public String showDemo() {
+        return "demo";
+    }
+
 }
