@@ -6,6 +6,6 @@ package com.example.demo.web.admin.promo;
  */
 public class PromoController {
     /**
-     *  commit test
+     * commit test
      */
 }
