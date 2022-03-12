@@ -2,5 +2,5 @@
 <#import "theme/layout.ftl" as layout/>
 
 <@layout.layout>
-    index
+    Индекс
 </@layout.layout>
