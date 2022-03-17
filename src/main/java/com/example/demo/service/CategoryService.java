@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.dao.mapper.CategoryDao;
+import com.example.demo.dao.CategoryDao;
 import com.example.demo.model.Category;
 import org.springframework.stereotype.Service;
 
