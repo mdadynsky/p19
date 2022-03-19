@@ -1,4 +1,5 @@
 package com.example.demo.web.admin.user;
+
 import com.example.demo.model.User;
 import com.example.demo.service.UserService;
 import org.springframework.stereotype.Controller;
@@ -11,7 +12,7 @@ import java.util.Map;
 @Controller
 public class UserController {
 
-    private UserService userService;
+    private final UserService userService;
 
     public UserController(UserService userService) {
         this.userService = userService;

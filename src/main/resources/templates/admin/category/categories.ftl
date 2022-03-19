@@ -2,6 +2,7 @@
 <#import "../../theme/layout.ftl" as layout/>
 
 <@layout.layout>
+    <h1>Categories</h1>
     <table class="table table-hover">
         <thead>
         <tr>
@@ -11,25 +12,12 @@
         </tr>
         </thead>
         <tbody>
-        <div class="container-fluid">
-        <tr>
-            <th scope="row">1</th>
-            <td>Для мужчин</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Для женщин</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Для детей</td>
-        </tr>
-        <tr>
-            <th scope="row">4</th>
-            <td>Акции</td>
-        </tr>
-            </div>
+        <#list categories as category>
+            <tr>
+                <td>${category.id}</td>
+                <td>${category.categoryName}</td>
+            </tr>
+        </#list>
         </tbody>
     </table>
-    <h1>Categories</h1>
 </@layout.layout>

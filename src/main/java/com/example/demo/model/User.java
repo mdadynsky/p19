@@ -1,12 +1,11 @@
 package com.example.demo.model;
 
 
-
 public class User {
     private Integer id;
     private String userName;
     private String password;
-    private  boolean active;
+    private boolean active;
 
     public Integer getId() {
         return id;
