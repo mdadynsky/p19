@@ -2,6 +2,7 @@
 <#import "../../theme/layout.ftl" as layout/>
 
 <@layout.layout>
+    <h1>Delivery</h1>
     <table class="table table-hover">
         <thead>
         <tr>
@@ -11,29 +12,12 @@
         </tr>
         </thead>
         <tbody>
-        <div class="container-fluid">
+        <#list delivery as delivery>
             <tr>
-                <th scope="row">1</th>
-                <td>Почта России</td>
+                <td>${delivery.id}</td>
+                <td>${delivery.companyName}</td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>ПЭК</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>DHL</td>
-            </tr>
-            <tr>
-                <th scope="row">4</th>
-                <td>СДЭК</td>
-            </tr>
-            <tr>
-                <th scope="row">5</th>
-                <td>Boxberry</td>
-            </tr>
-        </div>
+        </#list>
         </tbody>
     </table>
-    <h1>Доставка</h1>
 </@layout.layout>
