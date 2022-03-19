@@ -20,3 +20,9 @@ create table promo
     promoDescription varchar(250) not null,
     promoPrice       varchar(250) not null
 );
+
+create table delivery
+(
+    id               int auto_increment primary key,
+    companyName      varchar(250) not null
+);
