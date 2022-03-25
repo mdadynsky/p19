@@ -27,3 +27,10 @@ insert into delivery (companyName)
 values ('СДЭК');
 insert into delivery (companyName)
 values ('Boxberry');
+
+insert into producer (producerName, producerCountry)
+values ('Экивоки', 'Россия');
+insert into producer (producerName, producerCountry)
+values ('QiYi', 'Китай');
+insert into producer (producerName, producerCountry)
+values ('Pinito', 'Китай');

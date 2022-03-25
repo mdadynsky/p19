@@ -9,7 +9,6 @@
             <th scope="col">Id</th>
             <th scope="col">Название</th>
             <th scope="col">Страна</th>
-            <th scope="col">Адрес</th>
         </tr>
     </table>
 </@layout.layout>

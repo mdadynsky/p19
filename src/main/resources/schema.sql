@@ -32,5 +32,4 @@ create table producer
     id               int auto_increment primary key,
     producerName     varchar(250) not null,
     producerCountry  varchar(250) not null,
-    producerAddress  varchar(250) not null,
 );
