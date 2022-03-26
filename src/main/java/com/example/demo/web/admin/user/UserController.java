@@ -52,6 +52,12 @@ public class UserController {
         return "admin/user/users2";
     }
 
+    @GetMapping("/admin/user/create")
+    public String showCreate(Model model){
+        model.addAttribute("user", new User());
+        return "admin/user/edituser";
+    }
+
     @GetMapping("/admin/user/{userId}/edit")
     public String showUserEdit(@PathVariable Integer userId, Model model) {
         User user = userService.getUserById(userId);
@@ -66,6 +72,13 @@ public class UserController {
         user.setId(userId);
         System.out.println("Сохранние пользователя " + userId);
 
+        userService.save(user);
+        return "redirect:/admin/user/users";
+    }
+
+    @PostMapping("/admin/user/create")
+    public String saveUserEdit(
+            @ModelAttribute User user) {
         userService.save(user);
         return "redirect:/admin/user/users";
     }

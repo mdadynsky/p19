@@ -4,7 +4,7 @@
 <@layout.layout>
     <div class="row">
         <div class="col">
-            <h1 id="title">Редактирование пользователя ${user.userName}</h1>
+            <h1 id="title">Редактирование пользователя ${user.userName!''}</h1>
         </div>
     </div>
     <div class="row">
@@ -14,11 +14,11 @@
                     <form action="" method="post">
                         <div class="mb-3">
                             <label for="userNameInput" class="form-label">Имя пользователя</label>
-                            <input name="userName" type="text" value="${user.userName}" class="form-control" id="userNameInput" placeholder="Введите имя пользователя">
+                            <input name="userName" type="text" value="${user.userName!''}" class="form-control" id="userNameInput" placeholder="Введите имя пользователя">
                         </div>
                         <div class="mb-3">
                             <label for="passwordInput" class="form-label">Пароль</label>
-                            <input name="password" type="password" value="${user.password}" class="form-control" id="passwordInput" placeholder="Введите пароль">
+                            <input name="password" type="password" value="${user.password!''}" class="form-control" id="passwordInput" placeholder="Введите пароль">
                         </div>
                         <div class="mb-3">
                             <input class="btn btn-primary"  type="submit" value="Сохранить">
