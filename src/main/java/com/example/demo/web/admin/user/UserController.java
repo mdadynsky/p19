@@ -30,6 +30,11 @@ public class UserController {
         return "admin/user/users";
     }
 
+    @GetMapping("/admin/user/users-ajax")
+    public String showUserList2() {
+        return "admin/user/users2";
+    }
+
     @RequestMapping("/admin/user/edit")
     public String showUserEdit() {
         return "admin/user/edituser";
