@@ -52,8 +52,21 @@ public class UserController {
         return "admin/user/users2";
     }
 
-    @RequestMapping("/admin/user/edit")
-    public String showUserEdit() {
+    @GetMapping("/admin/user/{userId}/edit")
+    public String showUserEdit(@PathVariable Integer userId, Model model) {
+        User user = userService.getUserById(userId);
+        model.addAttribute("user", user);
         return "admin/user/edituser";
+    }
+
+    @PostMapping("/admin/user/{userId}/edit")
+    public String saveUserEdit(
+            @ModelAttribute User user,
+            @PathVariable Integer userId) {
+        user.setId(userId);
+        System.out.println("Сохранние пользователя " + userId);
+
+        userService.save(user);
+        return "redirect:/admin/user/users";
     }
 }

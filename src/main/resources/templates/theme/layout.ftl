@@ -13,7 +13,9 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    <#nested/>
+    <div class="container">
+        <#nested/>
+    </div>
 </body>
 </html>
 </#macro>
