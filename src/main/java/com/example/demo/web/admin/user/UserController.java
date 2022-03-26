@@ -4,11 +4,9 @@ import com.example.demo.model.User;
 import com.example.demo.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.server.PathParam;
 import java.util.List;
 import java.util.Map;
 
@@ -31,8 +29,20 @@ public class UserController {
         return "admin/user/users";
     }
 
+    /**
+     * Удаление пользователя с спользованием RequestParam
+     * /admin/user/edit?userId=${user.id}
+     * @param userId
+     * @return
+     */
     @GetMapping("/admin/user/delete")
     public String deleteUser(@RequestParam Integer userId) {
+        userService.deleteUser(userId);
+        return "redirect:/admin/user/users";
+    }
+
+    @GetMapping("/admin/user/{userId}/delete")
+    public String deleteUser2(@PathVariable Integer userId) {
         userService.deleteUser(userId);
         return "redirect:/admin/user/users";
     }
