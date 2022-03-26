@@ -22,4 +22,8 @@ public class UserDao extends BaseDao {
     public List<User> getUserList() {
         return jdbcTemplate.query("select * from user", new UserRowMapper());
     }
+
+    public void deleteUser(Integer userId) {
+        jdbcTemplate.update("delete from user where id = " + userId);
+    }
 }

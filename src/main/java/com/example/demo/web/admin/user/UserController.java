@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 import java.util.Map;
@@ -28,6 +29,12 @@ public class UserController {
         model.addAttribute("users", users);
 
         return "admin/user/users";
+    }
+
+    @GetMapping("/admin/user/delete")
+    public String deleteUser(@RequestParam Integer userId) {
+        userService.deleteUser(userId);
+        return "redirect:/admin/user/users";
     }
 
     @GetMapping("/admin/user/users-ajax")

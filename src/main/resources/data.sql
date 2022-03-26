@@ -2,6 +2,15 @@ insert into user (username, password)
 values ('admin', 'admin');
 insert into user (username, password)
 values ('user', 'pass');
+insert into user (username, password)
+values ('admin2', 'admin');
+insert into user (username, password)
+values ('user2', 'pass');
+insert into user (username, password)
+values ('admin3', 'admin');
+insert into user (username, password)
+values ('user3', 'pass');
+
 
 insert into category (category)
 values ('Для мужчин');

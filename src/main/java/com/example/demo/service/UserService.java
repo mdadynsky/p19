@@ -22,4 +22,8 @@ public class UserService {
     public List<User> getUserList() {
         return userDao.getUserList();
     }
+
+    public void deleteUser(Integer userId) {
+        userDao.deleteUser(userId);
+    }
 }
