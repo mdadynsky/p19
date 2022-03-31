@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import javax.websocket.server.PathParam;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +21,8 @@ public class UserController {
     }
 
     @GetMapping("/admin/user/users")
-    public String showUserList(Model model) {
+    public String showUserList(Model model, HttpSession session) {
+        session.setAttribute("v1", "Hello");
         List<Map<String, Object>> listOfMaps = userService.getUsers();
         List<User> users = userService.getUserList();
 
@@ -53,8 +55,11 @@ public class UserController {
     }
 
     @GetMapping("/admin/user/create")
-    public String showCreate(Model model){
+    public String showCreate(Model model, HttpSession session){
+        String v1 = (String) session.getAttribute("v1");
+
         model.addAttribute("user", new User());
+        model.addAttribute("v1", v1);
         return "admin/user/edituser";
     }
 
