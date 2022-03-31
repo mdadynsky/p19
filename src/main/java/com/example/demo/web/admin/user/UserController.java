@@ -4,10 +4,9 @@ import com.example.demo.model.User;
 import com.example.demo.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.server.PathParam;
 import java.util.List;
 import java.util.Map;
 
@@ -30,8 +29,57 @@ public class UserController {
         return "admin/user/users";
     }
 
-    @RequestMapping("/admin/user/edit")
-    public String showUserEdit() {
+    /**
+     * Удаление пользователя с спользованием RequestParam
+     * /admin/user/edit?userId=${user.id}
+     * @param userId
+     * @return
+     */
+    @GetMapping("/admin/user/delete")
+    public String deleteUser(@RequestParam Integer userId) {
+        userService.deleteUser(userId);
+        return "redirect:/admin/user/users";
+    }
+
+    @GetMapping("/admin/user/{userId}/delete")
+    public String deleteUser2(@PathVariable Integer userId) {
+        userService.deleteUser(userId);
+        return "redirect:/admin/user/users";
+    }
+
+    @GetMapping("/admin/user/users-ajax")
+    public String showUserList2() {
+        return "admin/user/users2";
+    }
+
+    @GetMapping("/admin/user/create")
+    public String showCreate(Model model){
+        model.addAttribute("user", new User());
         return "admin/user/edituser";
+    }
+
+    @GetMapping("/admin/user/{userId}/edit")
+    public String showUserEdit(@PathVariable Integer userId, Model model) {
+        User user = userService.getUserById(userId);
+        model.addAttribute("user", user);
+        return "admin/user/edituser";
+    }
+
+    @PostMapping("/admin/user/{userId}/edit")
+    public String saveUserEdit(
+            @ModelAttribute User user,
+            @PathVariable Integer userId) {
+        user.setId(userId);
+        System.out.println("Сохранние пользователя " + userId);
+
+        userService.save(user);
+        return "redirect:/admin/user/users";
+    }
+
+    @PostMapping("/admin/user/create")
+    public String saveUserEdit(
+            @ModelAttribute User user) {
+        userService.save(user);
+        return "redirect:/admin/user/users";
     }
 }

@@ -2,74 +2,27 @@
 <#import "../../theme/layout.ftl" as layout/>
 
 <@layout.layout>
-    <h1>User list</h1>
+    <h1>Список пользователей</h1>
 
     <table class="table">
         <tr>
+            <th><a href="/admin/user/create"><i class="bi bi-plus-square-fill"></i></a></th>
             <th>Id</th>
             <th>Имя пользователя</th>
         </tr>
         <#list users as user>
             <tr>
+                <td>
+                    <a href="/admin/user/${user.id}/edit"><i class="bi bi-pencil-fill"></i></a>
+
+                    <a href="/admin/user/${user.id}/delete"><i class="bi bi-trash-fill delete"></i></a>
+
+                    <a href="/admin/user/delete?userId=${user.id}"><i class="bi bi-x delete"></i></a>
+                </td>
                 <td>${user.id}</td>
                 <td>${user.userName}</td>
             </tr>
         </#list>
     </table>
-
-    <h2>Table 2</h2>
-    <table class="table" id="user-table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Имя пользователя</th>
-            </tr>
-        </thead>
-        <tbody>
-            <template data-type="row">
-                <tr>
-                    <td data-field="id"></td>
-                    <td data-field="userName"></td>
-                </tr>
-            </template>
-        </tbody>
-    </table>
-
-    <script>
-        axios({
-            method: 'post',
-            url: '/api/admin/user/users',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }).then(function (response) {
-            let rowTemplate = document.querySelector('#user-table template[data-type="row"]');
-            let tableBody = document.querySelector('#user-table tbody');
-
-            tableBody.querySelectorAll("tr").forEach(function (e) {
-                e.remove()
-            })
-
-            if (response.data.length === 0) {
-                let notFoundTemplate = document.querySelector('#user-table template[data-type="not-found"]');
-                let row = notFoundTemplate.content.cloneNode(true)
-                tableBody.appendChild(row);
-            } else {
-                response.data.map(function (data) {
-                    let row = rowTemplate.content.cloneNode(true);
-                    {
-                        Object.keys(data).map((fieldName, i) => {
-                            let cell = row.querySelector("[data-field='" + fieldName + "']");
-                            if (cell != null)
-                                cell.textContent = data[fieldName];
-                        })
-                    }
-                    tableBody.appendChild(row);
-                }).join('');
-            }
-        }).catch(function (err) {
-
-        });
-    </script>
 
 </@layout.layout>

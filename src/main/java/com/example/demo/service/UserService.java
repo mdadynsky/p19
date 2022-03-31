@@ -22,4 +22,19 @@ public class UserService {
     public List<User> getUserList() {
         return userDao.getUserList();
     }
+
+    public User getUserById(Integer userId){
+        return userDao.getUserById(userId);
+    }
+
+    public void deleteUser(Integer userId) {
+        userDao.deleteUser(userId);
+    }
+
+    public void save(User user) {
+        if (user.getId()==null)
+            userDao.insert(user);
+        else
+            userDao.update(user);
+    }
 }
