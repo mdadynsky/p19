@@ -17,4 +17,19 @@ public class PromoService {
     public List<Promo> getPromoList() {
         return promoDao.getPromoList();
     }
+
+    public Promo getPromoById(Integer promoId) {
+        return promoDao.getPromoById(promoId);
+    }
+
+    public void deletePromo(Integer promoId) {
+        promoDao.deletePromo(promoId);
+    }
+
+    public void save(Promo promo) {
+        if (promo.getId() == null)
+            promoDao.insert(promo);
+        else
+            promoDao.update(promo);
+    }
 }
