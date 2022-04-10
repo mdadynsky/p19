@@ -66,13 +66,18 @@
                         </li>
                         <li class="border-top my-3"></li>
                         <li class="mb-1">
-                            <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                            <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse"
+                                    data-bs-target="#account-collapse" aria-expanded="false">
                                 Администрирование
                             </button>
                             <div class="collapse" id="account-collapse">
                                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                    <li><a href="/admin/user/create" class="link-dark rounded">Создать пользователя</a></li>
-                                    <li><a href="/admin/user/users" class="link-dark rounded">Список пользователей</a></li>
+                                    <li><a href="/admin/user/create" class="link-dark rounded">Создать пользователя</a>
+                                    </li>
+                                    <li><a href="/admin/user/users" class="link-dark rounded">Список пользователей</a>
+                                    </li>
+                                    <li><a href="/admin/promo/promo" class="link-dark rounded">Список промо-акций</a>
+                                    </li>
                                     <li><a href="#" class="link-dark rounded">Profile</a></li>
                                     <li><a href="#" class="link-dark rounded">Settings</a></li>
                                     <li><a href="#" class="link-dark rounded">Sign out</a></li>
