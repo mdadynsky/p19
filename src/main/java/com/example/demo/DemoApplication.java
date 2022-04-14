@@ -2,11 +2,20 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @SpringBootApplication
 public class DemoApplication {
 
     public static void main(String[] args) {
+        showLogo();
+        SpringApplication.run(DemoApplication.class, args);
+    }
+
+    public static void showLogo(){
         System.out.println("                                                                                                                          \n" +
                 "                                                ▒▒▒▒▒▒▒▒▒▒▒▒▒▒                                                            \n" +
                 "                                            ░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░                                                      \n" +
@@ -67,6 +76,6 @@ public class DemoApplication {
                 "                                            ░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒                                      \n" +
                 "                                            ░░░░▒▒░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░                                      \n" +
                 "                                                ▒▒▒▒▒▒░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒                                            \n");
-        SpringApplication.run(DemoApplication.class, args);
+
     }
 }

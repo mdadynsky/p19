@@ -82,7 +82,7 @@
                                     </li>
                                     <li><a href="#" class="link-dark rounded">Profile</a></li>
                                     <li><a href="#" class="link-dark rounded">Settings</a></li>
-                                    <li><a href="#" class="link-dark rounded">Sign out</a></li>
+                                    <li><a href="/logout.html" class="link-dark rounded">Выход</a></li>
                                 </ul>
                             </div>
                         </li>
