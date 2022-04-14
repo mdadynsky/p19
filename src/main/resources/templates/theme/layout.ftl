@@ -76,6 +76,8 @@
                                     </li>
                                     <li><a href="/admin/user/users" class="link-dark rounded">Список пользователей</a>
                                     </li>
+                                    <li><a href="/admin/promo/create" class="link-dark rounded">Добавить промо-акцию</a>
+                                    </li>
                                     <li><a href="/admin/promo/promo" class="link-dark rounded">Список промо-акций</a>
                                     </li>
                                     <li><a href="#" class="link-dark rounded">Profile</a></li>
