@@ -16,7 +16,6 @@
             <tr>
                 <td>
                     <a href="/admin/promo/${promo.id}/edit"><i class="bi bi-pencil-fill"></i></a>
-
                     <a href="#" onclick="isDelete(${promo.id});"><i class="bi bi-trash-fill delete"></i></a>
                 </td>
                 <td>${promo.id}</td>
@@ -28,7 +27,13 @@
         </tbody>
     </table>
 
+    <button class="btn btn-primary" onclick="redirectToAddPage()">Добавить запись</button>
+
     <script>
+        function redirectToAddPage() {
+            document.location.href = "/admin/promo/create";
+        }
+
         function isDelete(promoId) {
             let isConf = confirm("Удалить запись?");
             if (isConf) {
