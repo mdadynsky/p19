@@ -27,13 +27,7 @@
         </tbody>
     </table>
 
-    <button class="btn btn-primary" onclick="redirectToAddPage()">Добавить запись</button>
-
     <script>
-        function redirectToAddPage() {
-            document.location.href = "/admin/promo/create";
-        }
-
         function isDelete(promoId) {
             let isConf = confirm("Удалить запись?");
             if (isConf) {
