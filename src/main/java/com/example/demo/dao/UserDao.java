@@ -39,6 +39,19 @@ public class UserDao extends BaseDao {
         return users.get(0);
     }
 
+    public User getUserByName(String userName) {
+        List<User> users = jdbcTemplate.query(
+                "select * from user where username = ?",
+                preparedStatement -> preparedStatement.setString(1, userName),
+                new UserRowMapper());
+
+
+        if (users.isEmpty())
+            return null;
+
+        return users.get(0);
+    }
+
     public void deleteUser(Integer userId) {
         jdbcTemplate.update("delete from user where id = " + userId);
     }
@@ -61,5 +74,6 @@ public class UserDao extends BaseDao {
                     preparedStatement.setString(1, user.getUserName());
                     preparedStatement.setString(2, user.getPassword());
                 });
+
     }
 }

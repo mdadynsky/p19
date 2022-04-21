@@ -5,7 +5,7 @@ public class User {
     private Integer id;
     private String userName;
     private String password;
-    private boolean active;
+    private boolean active = true;
 
     public Integer getId() {
         return id;
