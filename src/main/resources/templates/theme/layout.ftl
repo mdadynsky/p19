@@ -80,6 +80,10 @@
                                     </li>
                                     <li><a href="/admin/promo/promo" class="link-dark rounded">Список промо-акций</a>
                                     </li>
+                                    <li><a href="/admin/producer/create" class="link-dark rounded">Добавить производителя</a>
+                                    </li>
+                                    <li><a href="/admin/producer/producers" class="link-dark rounded">Список производителей</a>
+                                    </li>
                                     <li><a href="#" class="link-dark rounded">Profile</a></li>
                                     <li><a href="#" class="link-dark rounded">Settings</a></li>
                                     <li><a href="/logout.html" class="link-dark rounded">Выход</a></li>
