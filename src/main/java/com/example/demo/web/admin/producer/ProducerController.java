@@ -90,5 +90,4 @@ public class ProducerController {
         producerService.save(producer);
         return "redirect:/admin/producer/producers";
     }
-    )
 }
