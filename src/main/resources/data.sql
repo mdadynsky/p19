@@ -43,3 +43,8 @@ insert into producer (producerName, producerCountry)
 values ('QiYi', 'Китай');
 insert into producer (producerName, producerCountry)
 values ('Pinito', 'Китай');
+
+insert into product(productName, productAge,productType,productProducer,productCost)
+values ( 'Кубик рубика','+6','Головоломка','Qiyi',4100 );
+insert into product(productName, productAge,productType,productProducer,productCost)
+values ( 'Монополия','+6','Семейные','Pinito',2500 );
