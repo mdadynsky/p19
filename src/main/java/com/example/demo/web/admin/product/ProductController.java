@@ -28,7 +28,7 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @GetMapping("/admin//product/products")
+    @GetMapping("/admin/product/product")
     public String showProductList(Model model) {
         List<Map<String, Object>> listOfMaps = productService.getProduct();
         List<Product> products = productService.getProductList();
@@ -47,7 +47,7 @@ public class ProductController {
     public String showCreate(Model model) {
 
         model.addAttribute("product", new Product());
-        return "admin/promo/editproduct";
+        return "admin/product/editproduct";
     }
     @GetMapping("/admin/product/{productId}/edit")
     public String showproductEdit(@PathVariable Integer productId, Model model) {

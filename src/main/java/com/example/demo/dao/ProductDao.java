@@ -20,7 +20,7 @@ public class ProductDao extends BaseDao {
     }
     public List<Product> getProductList(){ return jdbcTemplate.query("select * from product", new ProductRowMapper());}
     public List<Map<String, Object>> getProducts() {
-        return jdbcTemplate.queryForList("select * from products");
+        return jdbcTemplate.queryForList("select * from product");
     }
 
     public Product getProductbyId(Integer productId){

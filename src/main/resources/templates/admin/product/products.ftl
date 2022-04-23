@@ -3,7 +3,7 @@
 
 <@layout.layout>
     <h1>Product</h1>
-    <div class="container">
+
     <table class="table table-hover">
         <thead>
         <tr>
@@ -40,5 +40,5 @@
                 }
             }
         </script>
-</div>
+
 </@layout.layout>

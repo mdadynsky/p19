@@ -14,6 +14,6 @@ public class ProductApiController {
 
     public ProductApiController(ProductService productService) { this.productService = productService; };
 
-    @RequestMapping(value = "/api/producers")
+    @RequestMapping(value = "/api/product")
     public List<Product> getProduct() { return productService.getProductList(); };
 }

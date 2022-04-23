@@ -23,7 +23,7 @@ public class ProductService {
 
     public Product getProductById(Integer productId){ return  productDao.getProductbyId(productId);}
 
-    public void deleteProduct(Integer prudctId){productDao.deleteProduct(prudctId);}
+    public void deleteProduct(Integer productId){productDao.deleteProduct(productId);}
 
     public void save(Product product){
         if(product.getId()==null)
