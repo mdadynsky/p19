@@ -1,5 +1,6 @@
 package com.example.demo.configuration;
 
+import com.example.demo.resolver.MyLocaleResolver;
 import freemarker.ext.jsp.TaglibFactory;
 import freemarker.template.TemplateException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.web.filter.CharacterEncodingFilter;
+import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -59,5 +61,10 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
         characterEncodingFilter.setForceRequestEncoding(true);
         characterEncodingFilter.setForceRequestEncoding(true);
         return characterEncodingFilter;
+    }
+
+    @Bean
+    public LocaleResolver localeResolver() {
+        return new MyLocaleResolver();
     }
 }
