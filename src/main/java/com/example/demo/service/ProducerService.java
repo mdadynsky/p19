@@ -22,4 +22,18 @@ public class ProducerService {
     public List<Producer> getProducerList() {
         return producerDao.getProducerList();
     }
+
+    public Producer getProducerById(Integer producerId) { return producerDao.getProducerById(producerId); }
+
+    public Producer getProducerByName(String producerName) { return producerDao.getProducerByName((producerName)); }
+
+    public void deleteProducer(Integer producerId) { producerDao.deleteProducer(producerId); }
+
+    public void save(Producer producer)
+    {
+        if (producer.getId()==null)
+            producerDao.insert(producer);
+        else
+            producerDao.update(producer);
+    }
 }
