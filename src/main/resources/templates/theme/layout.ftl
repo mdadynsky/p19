@@ -84,6 +84,10 @@
                                     </li>
                                     <li><a href="/admin/producer/producers" class="link-dark rounded">Список производителей</a>
                                     </li>
+                                    <li><a href="/admin/delivery/create" class="link-dark rounded">Добавить компании по доставке</a>
+                                    </li>
+                                    <li><a href="/admin/delivery/delivery" class="link-dark rounded">Список компаний по доставке</a>
+                                    </li>
                                     <li><a href="#" class="link-dark rounded">Profile</a></li>
                                     <li><a href="#" class="link-dark rounded">Settings</a></li>
                                     <li><a href="/logout.html" class="link-dark rounded">Выход</a></li>

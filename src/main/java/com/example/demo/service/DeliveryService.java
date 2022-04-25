@@ -17,4 +17,19 @@ public class DeliveryService {
     public List<Delivery> getDeliveryList() {
         return deliveryDao.getDeliveryList();
     }
+
+    public Delivery getDeliveryById(Integer deliveryId) {
+        return deliveryDao.getDeliveryById(deliveryId);
+    }
+
+    public void deleteDelivery(Integer deliveryId) {
+        deliveryDao.deleteDelivery(deliveryId);
+    }
+
+    public void save(Delivery delivery) {
+        if (delivery.getId() == null)
+            deliveryDao.insert(delivery);
+        else
+            deliveryDao.update(delivery);
+    }
 }

@@ -3,16 +3,19 @@
 
 <@layout.layout>
     <h1>Delivery</h1>
-    <table class="table table-hover">
-        <thead>
+    <table class="table">
         <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Company</th>
+            <th><a href="/admin/delivery/create"><i class="bi bi-plus-square-fill"></i></a></th>
+            <th>#</th>
+            <th>CompanyName</th>
         </tr>
-        </thead>
         <tbody>
         <#list delivery as delivery>
             <tr>
+                <td>
+                    <a href="/admin/delivery/${delivery.id}/edit"><i class="bi bi-pencil-fill"></i></a>
+                    <a href="#" onclick="isDelete(${delivery.id});"><i class="bi bi-trash-fill delete"></i></a>
+                </td>
                 <td>${delivery.id}</td>
                 <td>${delivery.companyName}</td>
             </tr>
@@ -20,48 +23,12 @@
         </tbody>
     </table>
 
-
-    <h2>Delivery</h2>
-    <table class="table" id="delivery-table">
-        <thead>
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Company</th>
-        </tr>
-        </thead>
-        <tbody>
-        <template data-type="row">
-            <tr>
-                <td data-field="id"></td>
-                <td data-field="companyName"></td>
-                <td data-field="companyName"></td>
-            </tr>
-        </template>
-        </tbody>
-    </table>
     <script>
-        axios({
-            url: '/api/admin/delivery/delivery',
-            headers: {
-                'Content-Type': 'application/json'
+        function isDelete(deliveryId) {
+            let isConf = confirm("Удалить запись?");
+            if (isConf) {
+                document.location.replace("/admin/delivery/" + deliveryId + "/delete");
             }
-        }).then(function (response) {
-            console.log("ajax-запрос получен")
-            let tableBody = document.querySelector('#delivery-table tbody');
-            console.log(tableBody);
-            let template = tableBody.querySelector("template");
-            console.log(template);
-            response.data.forEach(data => {
-                console.log("*")
-                console.log(data)
-                let row = template.content.cloneNode(true)
-                let cellId = row.querySelector('[data-field="id"]')
-                let cellCompanyName = row.querySelector('[data-field="companyName"]')
-                cellId.textContent = data.id
-                cellCompanyName.textContent = data.companyName
-                tableBody.appendChild(row)
-            })
-        })
+        }
     </script>
-
 </@layout.layout>
