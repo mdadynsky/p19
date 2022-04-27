@@ -78,6 +78,8 @@
                                     </li>
                                     <li><a href="/admin/category/categories" class="link-dark rounded">Список категорий</a>
                                     </li>
+                                    <li><a href="/admin/branch/branch" class="link-dark rounded">Список филиалов</a>
+                                    </li>
                                     <li><a href="/admin/promo/create" class="link-dark rounded">Добавить промо-акцию</a>
                                     </li>
                                     <li><a href="/admin/promo/promo" class="link-dark rounded">Список промо-акций</a>
