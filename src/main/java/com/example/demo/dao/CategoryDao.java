@@ -1,6 +1,5 @@
 package com.example.demo.dao;
 
-import com.example.demo.dao.BaseDao;
 import com.example.demo.dao.mapper.CategoryRowMapper;
 import com.example.demo.model.Category;
 import org.springframework.jdbc.core.JdbcTemplate;
