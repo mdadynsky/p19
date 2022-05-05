@@ -43,4 +43,10 @@ create table product
     productType  varchar(250) not null,
     productProducer  varchar(250) not null,
     productCost  double not null
-)
+);
+
+create table banner
+(
+    id               int auto_increment primary key,
+    category         varchar(250) not null
+);

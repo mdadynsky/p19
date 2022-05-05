@@ -26,6 +26,13 @@ values ('Настольная игра "Штука"', 'Объясни. Найд�
 insert into promo (promoName, promoDescription, promoPrice)
 values ('Игрушка-антистресс', 'Мягкая игрушка, которую можно сжимать, растягивать и подбрасывать.', '240.00 руб.');
 
+insert into banner (category) values ('Для мужчин');
+insert into banner (category) values ('Для мужчин');
+insert into banner (category) values ('Для мужчин');
+insert into banner (category) values ('Для мужчин');
+insert into banner (category) values ('Для мужчин');
+
+
 insert into delivery (companyName)
 values ('Почта России');
 insert into delivery (companyName)
