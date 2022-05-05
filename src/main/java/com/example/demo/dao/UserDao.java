@@ -59,20 +59,22 @@ public class UserDao extends BaseDao {
 
     public void update(User user) {
         jdbcTemplate.update(
-                "update user set username = ?, password = ? where id = ?",
+                "update user set username = ?, password = ?, phone = ? where id = ?",
                 preparedStatement -> {
                     preparedStatement.setString(1, user.getUserName());
                     preparedStatement.setString(2, user.getPassword());
-                    preparedStatement.setInt(3, user.getId());
+                    preparedStatement.setString(3, user.getPhone());
+                    preparedStatement.setInt(4, user.getId());
                 });
     }
 
     public void insert(User user) {
         jdbcTemplate.update(
-                "insert into user (username, password) values (?,?)",
+                "insert into user (username, password, phone) values (?,?,?)",
                 preparedStatement -> {
                     preparedStatement.setString(1, user.getUserName());
                     preparedStatement.setString(2, user.getPassword());
+                    preparedStatement.setString(3, user.getPhone());
                 });
 
     }

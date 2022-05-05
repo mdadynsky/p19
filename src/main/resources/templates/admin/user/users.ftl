@@ -9,6 +9,7 @@
             <th><a href="/admin/user/create"><i class="bi bi-plus-square-fill"></i></a></th>
             <th>Id</th>
             <th>Имя пользователя</th>
+            <th>Телефон</th>
         </tr>
         <#list users as user>
             <tr>
@@ -21,6 +22,7 @@
                 </td>
                 <td>${user.id}</td>
                 <td>${user.userName}</td>
+                <td>${user.phone!'Не указано'}</td>
             </tr>
         </#list>
     </table>

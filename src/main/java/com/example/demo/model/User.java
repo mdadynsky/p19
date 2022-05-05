@@ -5,6 +5,7 @@ public class User {
     private Integer id;
     private String userName;
     private String password;
+    private String phone;
     private boolean active = true;
 
     public Integer getId() {
@@ -29,6 +30,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public boolean isActive() {

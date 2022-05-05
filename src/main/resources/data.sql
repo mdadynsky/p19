@@ -1,7 +1,7 @@
-insert into user (username, password)
-values ('admin', 'admin');
-insert into user (username, password)
-values ('user', 'pass');
+insert into user (username, password, phone)
+values ('admin', 'admin', '+12345678900');
+insert into user (username, password, phone)
+values ('user', 'pass', '+72345670000');
 insert into user (username, password)
 values ('admin2', 'admin');
 insert into user (username, password)
