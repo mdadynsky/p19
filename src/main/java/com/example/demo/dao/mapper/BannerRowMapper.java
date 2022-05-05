@@ -13,6 +13,7 @@ public class BannerRowMapper implements RowMapper {
         Banner banner = new Banner();
 
         banner.setId(rs.getInt("id"));
+        banner.setBannerName(rs.getString("name"));
 
         return banner;
     }

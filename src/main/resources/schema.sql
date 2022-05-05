@@ -48,5 +48,5 @@ create table product
 create table banner
 (
     id               int auto_increment primary key,
-    category         varchar(250) not null
+    name             varchar(250) not null
 );

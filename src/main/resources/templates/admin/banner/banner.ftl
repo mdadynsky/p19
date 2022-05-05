@@ -6,31 +6,23 @@
     <table class="table table-hover">
         <thead>
         <tr>
+            <th scope="col">id</th>
             <th scope="col">Название</th>
-            <th scope="col">категория</th>
 
         </tr>
         </thead>
         <tbody>
+         <#list banners as banner>
         <tr>
-            <th scope="row">1</th>
-            <td> подарок со смыслом</td>
-            <td>акции</td>
+            <td> ${banner.id}</td>
+            <td> ${banner.bannerName}</td>
+
 
         </tr>
-        <tr>
-            <th scope="row">1</th>
-            <td> супер скидки</td>
-            <td>Для детей</td>
-
-        </tr>
-        <tr>
-            <th scope="row">1</th>
-            <td> свет мой зеркальце</td>
-            <td>Для женщин</td>
-
-        </tr>
+        </#list>
         </tbody>
     </table>
     </div>
+
+
 </@layout.layout>
