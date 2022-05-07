@@ -24,6 +24,8 @@ public class UserController {
     public String showUserList(Model model, HttpSession session) {
         session.setAttribute("v1", "Hello");
         List<Map<String, Object>> listOfMaps = userService.getUsers();
+
+
         List<User> users = userService.getUserList();
 
         model.addAttribute("users", users);

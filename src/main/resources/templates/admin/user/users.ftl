@@ -2,6 +2,7 @@
 <#import "../../theme/layout.ftl" as layout/>
 
 <@layout.layout>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <h1>Список пользователей</h1>
 
     <table class="table">
@@ -16,7 +17,7 @@
                 <td>
                     <a href="/admin/user/${user.id}/edit"><i class="bi bi-pencil-fill"></i></a>
 
-                    <a href="#" onclick="isDelete(${user.id});"><i class="bi bi-trash-fill delete"></i></a>
+                    <a href="#" onclick="isDelete2(${user.id});"><i class="bi bi-trash-fill delete"></i></a>
 
                     <a href="/admin/user/delete?userId=${user.id}"><i class="bi bi-x delete"></i></a>
                 </td>
@@ -31,6 +32,24 @@
     <button class="btn btn-primary" onclick="showPrompt()">Prompt</button>
     <button class="btn btn-primary" onclick="showConfirm()">Confirm</button>
     <script>
+        function isDelete2(userId) {
+            Swal.fire({
+                title: 'Удалить запись?',
+                showDenyButton: true,
+                showCancelButton: true,
+                confirmButtonText: 'Удалить',
+                denyButtonText: `НЕ удалять`,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire('Удаляем!', '', 'success').then((result) => {
+                        document.location.replace("/admin/user/"+userId+"/delete")
+                    });
+                } else if (result.isDenied) {
+                    Swal.fire('Удаление прервано', '', 'info')
+                }
+            })
+        }
+
         function isDelete(userId) {
             let isConf = confirm("Удалить запись?");
             if (isConf) {
