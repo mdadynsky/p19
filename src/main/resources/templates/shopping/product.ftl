@@ -1,4 +1,4 @@
-<#macro item name cost age producer>
+<#macro item productId name cost age producer>
     <div class="card" style="width: 18rem;">
         <img src="https://cdn1.ozone.ru/s3/multimedia-v/6060630475.jpg" class="card-img-top pt-3" alt="...">
         <div class="card-body">
@@ -11,7 +11,7 @@
             <h5 class="card-title">${name}</h5>
             <p class="card-text">${producer}</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
-            <a href="#" class="btn btn-success" onclick="addToCard();">В корзину</a>
+            <a href="#" class="btn btn-success" onclick="addToCard(${productId});">В корзину</a>
         </div>
     </div>
 </#macro>
@@ -19,14 +19,16 @@
 <#macro script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-        function addToCard() {
+        function addToCard(id) {
             axios({
                 method: 'get',
-                url: '/shopping/add.html',
+                url: '/shopping/add.html?productId='+id,
                 headers: {
                     'Content-Type': 'application/json'
                 }
             }).then(function (response) {
+                let shoppingCardCount = document.querySelector("#shoppingCardCount");
+                shoppingCardCount.innerHTML=response.data.count;
                 Swal.fire(
                     'Товар добавлен в корзину',
                     'Самокат',

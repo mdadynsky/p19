@@ -7,7 +7,7 @@
     <div class="row gy-3">
         <#list products as product>
             <div class="col">
-                <@productCard.item product.productName product.productCost product.productAge product.producer/>
+                <@productCard.item product.id product.productName product.productCost product.productAge product.producer/>
             </div>
         </#list>
     </div>

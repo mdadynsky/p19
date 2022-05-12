@@ -1,9 +1,12 @@
 package com.example.demo.web;
 
+import com.example.demo.model.Product;
 import com.example.demo.model.ShoppingCardResult;
+import com.example.demo.service.ProductService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
@@ -14,6 +17,11 @@ import java.util.List;
 public class ShoppingCartController {
 
     public static final String ITEMS = "Items";
+    private ProductService productService;
+
+    public ShoppingCartController(ProductService productService) {
+        this.productService = productService;
+    }
 
     @GetMapping("/shopping/list.html")
     public String shoppingCartList(HttpSession session, Model model){
@@ -24,17 +32,19 @@ public class ShoppingCartController {
 
     @GetMapping("/shopping/add.html")
     @ResponseBody
-    public ShoppingCardResult addToShoppingCart(HttpSession session){
-
+    public ShoppingCardResult addToShoppingCart(@RequestParam Integer productId,HttpSession session){
         List items = (ArrayList) session.getAttribute(ShoppingCartController.ITEMS);
         if (items==null)
             items = new ArrayList();
 
-        items.add("Самокат");
+        Product product = productService.getProductById(productId);
+
+        items.add(product);
 
         session.setAttribute(ShoppingCartController.ITEMS, items);
 
         ShoppingCardResult result = new ShoppingCardResult();
+        result.setCount(items.size());
         result.setResult("ok");
 
         return result;

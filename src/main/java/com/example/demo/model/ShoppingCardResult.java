@@ -1,8 +1,11 @@
 package com.example.demo.model;
 
+import javax.persistence.criteria.CriteriaBuilder;
+
 public class ShoppingCardResult {
     String result;
     String user;
+    Integer count;
 
     public String getUser() {
         return "customer";
@@ -18,5 +21,13 @@ public class ShoppingCardResult {
 
     public void setResult(String result) {
         this.result = result;
+    }
+
+    public Integer getCount() {
+        return count;
+    }
+
+    public void setCount(Integer count) {
+        this.count = count;
     }
 }

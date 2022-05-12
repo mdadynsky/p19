@@ -31,7 +31,7 @@ public class ProductDao extends BaseDao {
         List<Product> products = jdbcTemplate.query(
                 "select * from product where id = ?",
                 preparedStatement -> preparedStatement.setInt(1, productId),
-                new PromoRowMapper());
+                new ProductRowMapper());
         if (products.isEmpty())
             return null;
 
