@@ -7,6 +7,7 @@
     <table class="table table-hover">
         <thead>
         <tr>
+            <th scope="col"></th>
             <th scope="col">#</th>
             <th scope="col">Название</th>
             <th scope="col">Тип</th>

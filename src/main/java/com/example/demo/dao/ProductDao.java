@@ -18,36 +18,44 @@ public class ProductDao extends BaseDao {
     public ProductDao(JdbcTemplate jdbcTemplate) {
         super(jdbcTemplate);
     }
-    public List<Product> getProductList(){ return jdbcTemplate.query("select * from product", new ProductRowMapper());}
+
+    public List<Product> getProductList() {
+        return jdbcTemplate.query("select * from product", new ProductRowMapper());
+    }
+
     public List<Map<String, Object>> getProducts() {
         return jdbcTemplate.queryForList("select * from product");
     }
 
-    public Product getProductbyId(Integer productId){
+    public Product getProductbyId(Integer productId) {
         List<Product> products = jdbcTemplate.query(
                 "select * from product where id = ?",
                 preparedStatement -> preparedStatement.setInt(1, productId),
                 new PromoRowMapper());
-        if(products.isEmpty())
+        if (products.isEmpty())
             return null;
 
         return products.get(0);
     }
-    public void deleteProduct (Integer productId){jdbcTemplate.update("delete from product where id = "+ productId);}
 
-    public void update(Product product){
+    public void deleteProduct(Integer productId) {
+        jdbcTemplate.update("delete from product where id = " + productId);
+    }
+
+    public void update(Product product) {
         jdbcTemplate.update("update product set productName =?, productType =?, productAge =?,productCost =? where id =?",
-               preparedStatement ->{
+                preparedStatement -> {
                     preparedStatement.setString(1, product.getProductName());
                     preparedStatement.setString(2, product.getProductType());
                     preparedStatement.setString(3, product.getProductAge());
                     preparedStatement.setDouble(4, product.getProductCost());
-                    preparedStatement.setInt(5,product.getId());
-               } );
+                    preparedStatement.setInt(5, product.getId());
+                });
     }
-    public void insert(Product product){
+
+    public void insert(Product product) {
         jdbcTemplate.update("insert into product(productName , productType , productAge ,productCost) values ( ?,?,?,? )",
-                preparedStatement->{
+                preparedStatement -> {
                     preparedStatement.setString(1, product.getProductName());
                     preparedStatement.setString(2, product.getProductType());
                     preparedStatement.setString(3, product.getProductAge());

@@ -39,7 +39,7 @@ create table product
 (
     id               int auto_increment primary key,
     productName     varchar(250) not null,
-    productAge  varchar(250) not null,
+    productAge  varchar(250) null,
     productType  varchar(250) not null,
     productProducer  varchar(250) not null,
     productCost  double not null

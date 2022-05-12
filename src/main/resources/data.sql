@@ -53,7 +53,19 @@ values ('QiYi', 'Китай');
 insert into producer (producerName, producerCountry)
 values ('Pinito', 'Китай');
 
+insert into product(productName, productType,productProducer,productCost)
+values ( 'Кубик рубика','Головоломка','Qiyi',4100 );
 insert into product(productName, productAge,productType,productProducer,productCost)
-values ( 'Кубик рубика','+6','Головоломка','Qiyi',4100 );
+values ( 'Монополия','6','Семейные','Pinito',2500 );
 insert into product(productName, productAge,productType,productProducer,productCost)
-values ( 'Монополия','+6','Семейные','Pinito',2500 );
+values ( 'Самокат 1','10','Самокаты','AccesStyle',34100 );
+insert into product(productName, productAge,productType,productProducer,productCost)
+values ( 'Самокат 2','16','Самокаты','Halten',24100 );
+insert into product(productName, productAge,productType,productProducer,productCost)
+values ( 'Самокат 3','16','Самокаты','Kugoo',54100 );
+insert into product(productName, productAge,productType,productProducer,productCost)
+values ( 'Самокат 4','16','Самокаты','Novatrack',64100 );
+insert into product(productName, productAge,productType,productProducer,productCost)
+values ( 'Самокат 5','16','Самокаты','Reactive',74100 );
+insert into product(productName, productAge,productType,productProducer,productCost)
+values ( 'Самокат 6','16','Самокаты','Thunderbird',75100 );
