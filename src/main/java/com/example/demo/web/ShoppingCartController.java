@@ -60,4 +60,10 @@ public class ShoppingCartController {
 
         return result;
     }
+
+
+    @GetMapping("/shopping/rating.html")
+    public void setRating(Integer productId, Integer rating) {
+
+    }
 }

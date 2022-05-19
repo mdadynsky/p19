@@ -8,6 +8,13 @@
                     <span class="badge bg-secondary">${age}</span>
                 </div>
             </div>
+            <div class="row">
+                <div class="col rating-star">
+                    <#list 1..5 as x>
+                        <i onclick="rating(${productId},${x})" class="bi bi-star"></i>
+                    </#list>
+                </div>
+            </div>
             <h5 class="card-title">${name}</h5>
             <p class="card-text">${producer}</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -34,6 +41,16 @@
                     'Самокат',
                     'success'
                 )
+            });
+        }
+
+        function rating(id, rt) {
+            axios({
+                method: 'get',
+                url: '/shopping/rating.html?productId='+id+'&rating='+rt,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
             });
         }
     </script>

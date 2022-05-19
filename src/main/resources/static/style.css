@@ -5,3 +5,7 @@
 .shopping-total-row {
     font-weight: bold;
 }
+
+.rating-star {
+    cursor: pointer;
+}
