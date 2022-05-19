@@ -10,6 +10,8 @@
     <link href="https://icons.getbootstrap.com/assets/font/bootstrap-icons.css" rel="stylesheet" >
     <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link href="/static/style.css" rel="stylesheet" >
 </head>
 <body>
 <div class="container">

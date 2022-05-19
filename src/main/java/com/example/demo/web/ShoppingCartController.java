@@ -5,6 +5,7 @@ import com.example.demo.model.ShoppingCardResult;
 import com.example.demo.service.ProductService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -25,8 +26,18 @@ public class ShoppingCartController {
 
     @GetMapping("/shopping/list.html")
     public String shoppingCartList(HttpSession session, Model model){
-        List items = (ArrayList) session.getAttribute(ShoppingCartController.ITEMS);
+        List<Product> items = (ArrayList) session.getAttribute(ShoppingCartController.ITEMS);
         model.addAttribute("items", items);
+
+        Double total = 0.0;
+        if (!CollectionUtils.isEmpty(items)) {
+            for (Product product : items) {
+                total += product.getProductCost();
+            }
+        }
+
+        model.addAttribute("total", total);
+
         return "/shopping/list";
     }
 

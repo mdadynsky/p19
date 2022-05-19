@@ -24,8 +24,13 @@
                     <td>${item.productCost}</td>
                 </tr>
             </#list>
+            <tr class="shopping-total-row">
+                <td colspan="4" ><span class="float-end">Сумма ваших покупок в нашем магазине</span></td>
+                <td>${total}</td>
+            </tr>
             </tbody>
         </table>
+
     </#if>
 </@layout.public>
 
