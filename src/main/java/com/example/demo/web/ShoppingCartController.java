@@ -61,6 +61,11 @@ public class ShoppingCartController {
         return result;
     }
 
+    @GetMapping("/shopping/clear.html")
+    public String clearCard(HttpSession session) {
+        session.removeAttribute(ShoppingCartController.ITEMS);
+        return "redirect:/shopping/list.html";
+    }
 
     @GetMapping("/shopping/rating.html")
     public void setRating(Integer productId, Integer rating) {

@@ -2,7 +2,7 @@
 
 <@layout.public>
     <h1>Корзина</h1>
-
+    <a href="/shopping/clear.html" class="btn btn-success">Очистить корзину</a>
     <#if items?has_content>
         <table class="table">
             <thead>
