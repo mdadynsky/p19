@@ -44,7 +44,7 @@
             }).then(function (response) {
                 let shoppingCardCount = document.querySelector("#shoppingCardCount");
                 shoppingCardCount.innerHTML=response.data.count;
-                let title = document.querySelector("#product-title-"+id);
+                let title = document.querySelector("#product-title-"+id).innerText;
                 Swal.fire(
                     'Товар добавлен в корзину',
                     title,

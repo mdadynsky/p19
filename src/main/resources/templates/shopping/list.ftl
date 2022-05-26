@@ -12,6 +12,7 @@
                     <th>Тип</th>
                     <th>Производитель</th>
                     <th>Цена</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -22,6 +23,11 @@
                     <td>${item.productType}</td>
                     <td>${item.producer}</td>
                     <td>${item.productCost}</td>
+                    <td>
+                        <a href="/shopping/clearOne.html?productId=${item.id}">
+                            <i class="bi bi-x delete"></i>
+                        </a>
+                    </td>
                 </tr>
             </#list>
             <tr class="shopping-total-row">

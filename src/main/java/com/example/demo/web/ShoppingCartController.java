@@ -67,6 +67,27 @@ public class ShoppingCartController {
         return "redirect:/shopping/list.html";
     }
 
+    @GetMapping("/shopping/clearOne.html")
+    public String clearOne(HttpSession session,
+                           @RequestParam Integer productId) {
+        List<Product> items = (ArrayList) session.getAttribute(ShoppingCartController.ITEMS);
+
+        if (items!=null) {
+            Product productForDelete = null;
+
+            for (Product product : items) {
+                if (product.getId() == productId) {
+                    productForDelete = product;
+                }
+            }
+
+            if (productForDelete!=null)
+                items.remove(productForDelete);
+        }
+
+        return "redirect:/shopping/list.html";
+    }
+
     @GetMapping("/shopping/rating.html")
     public void setRating(Integer productId, Integer rating) {
 
