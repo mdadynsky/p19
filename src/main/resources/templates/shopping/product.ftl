@@ -15,7 +15,7 @@
                     </#list>
                 </div>
             </div>
-            <h5 class="card-title">${name}</h5>
+            <h5 class="card-title" id="product-title-${productId}">${name}</h5>
             <p class="card-text">${producer}</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
             <a href="#" class="btn btn-success addToCard" id="${productId}">В корзину</a>
@@ -44,9 +44,10 @@
             }).then(function (response) {
                 let shoppingCardCount = document.querySelector("#shoppingCardCount");
                 shoppingCardCount.innerHTML=response.data.count;
+                let title = document.querySelector("#product-title-"+id);
                 Swal.fire(
                     'Товар добавлен в корзину',
-                    'Самокат',
+                    title,
                     'success'
                 )
             });
