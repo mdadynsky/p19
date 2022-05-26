@@ -18,7 +18,7 @@
             <h5 class="card-title">${name}</h5>
             <p class="card-text">${producer}</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
-            <a href="#" class="btn btn-success" onclick="addToCard(${productId});">В корзину</a>
+            <a href="#" class="btn btn-success addToCard" id="${productId}">В корзину</a>
         </div>
     </div>
 </#macro>
@@ -26,7 +26,15 @@
 <#macro script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-        function addToCard(id) {
+        document.addEventListener('DOMContentLoaded', function(){
+            let buttons = document.querySelectorAll(".addToCard");
+            buttons.forEach(function(btn) {
+                btn.onclick = addToCard;
+            });
+        });
+
+        function addToCard() {
+            let id = this.id;
             axios({
                 method: 'get',
                 url: '/shopping/add.html?productId='+id,
