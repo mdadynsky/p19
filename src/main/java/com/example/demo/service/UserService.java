@@ -23,11 +23,11 @@ public class UserService {
         return userDao.getUserList();
     }
 
-    public User getUserById(Integer userId){
+    public User getUserById(Integer userId) {
         return userDao.getUserById(userId);
     }
 
-    public User getUserByName(String userName){
+    public User getUserByName(String userName) {
         return userDao.getUserByName(userName);
     }
 
@@ -36,7 +36,7 @@ public class UserService {
     }
 
     public void save(User user) {
-        if (user.getId()==null)
+        if (user.getId() == null)
             userDao.insert(user);
         else
             userDao.update(user);

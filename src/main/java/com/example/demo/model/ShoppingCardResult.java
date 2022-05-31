@@ -1,7 +1,5 @@
 package com.example.demo.model;
 
-import javax.persistence.criteria.CriteriaBuilder;
-
 public class ShoppingCardResult {
     String result;
     String user;

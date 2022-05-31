@@ -18,14 +18,14 @@ import java.util.List;
 public class ShoppingCartController {
 
     public static final String ITEMS = "Items";
-    private ProductService productService;
+    private final ProductService productService;
 
     public ShoppingCartController(ProductService productService) {
         this.productService = productService;
     }
 
     @GetMapping("/shopping/list.html")
-    public String shoppingCartList(HttpSession session, Model model){
+    public String shoppingCartList(HttpSession session, Model model) {
         List<Product> items = (ArrayList) session.getAttribute(ShoppingCartController.ITEMS);
         model.addAttribute("items", items);
 
@@ -43,9 +43,9 @@ public class ShoppingCartController {
 
     @GetMapping("/shopping/add.html")
     @ResponseBody
-    public ShoppingCardResult addToShoppingCart(@RequestParam Integer productId,HttpSession session){
+    public ShoppingCardResult addToShoppingCart(@RequestParam Integer productId, HttpSession session) {
         List items = (ArrayList) session.getAttribute(ShoppingCartController.ITEMS);
-        if (items==null)
+        if (items == null)
             items = new ArrayList();
 
         Product product = productService.getProductById(productId);
@@ -72,7 +72,7 @@ public class ShoppingCartController {
                            @RequestParam Integer productId) {
         List<Product> items = (ArrayList) session.getAttribute(ShoppingCartController.ITEMS);
 
-        if (items!=null) {
+        if (items != null) {
             Product productForDelete = null;
 
             for (Product product : items) {
@@ -81,7 +81,7 @@ public class ShoppingCartController {
                 }
             }
 
-            if (productForDelete!=null)
+            if (productForDelete != null)
                 items.remove(productForDelete);
         }
 

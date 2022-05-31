@@ -13,7 +13,7 @@ import java.util.List;
  */
 @Controller
 public class BannerController {
-    private BannerService bannerService;
+    private final BannerService bannerService;
 
     public BannerController(BannerService bannerService) {
         this.bannerService = bannerService;
@@ -21,7 +21,7 @@ public class BannerController {
 
     @GetMapping("/admin/banner/banner")
     public String showUserList(Model model) {
-       List<Banner> banners =  bannerService.getBannerList();
+        List<Banner> banners = bannerService.getBannerList();
         model.addAttribute("var1", "Hello world");
         model.addAttribute("banners", banners);
         return ("/admin/banner/banner");

@@ -14,6 +14,12 @@ create table category
     category varchar(250) not null
 );
 
+create table points
+(
+    id       int auto_increment primary key,
+    points   varchar(250) not null
+);
+
 create table promo
 (
     id               int auto_increment primary key,

@@ -11,11 +11,15 @@ import java.util.List;
 @RequestMapping("/api/admin/producer")
 public class ProducerApiController {
 
-    private ProducerService producerService;
+    private final ProducerService producerService;
 
-    public ProducerApiController(ProducerService producerService) { this.producerService = producerService; };
+    public ProducerApiController(ProducerService producerService) {
+        this.producerService = producerService;
+    }
 
     @RequestMapping(value = "/producers")
-    public List<Producer> getProducers() { return producerService.getProducerList(); };
+    public List<Producer> getProducers() {
+        return producerService.getProducerList();
+    }
 
 }

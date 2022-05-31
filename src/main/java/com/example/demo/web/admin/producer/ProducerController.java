@@ -1,6 +1,5 @@
 package com.example.demo.web.admin.producer;
 
-import com.example.demo.dao.ProducerDao;
 import com.example.demo.model.Producer;
 import com.example.demo.service.ProducerService;
 import org.springframework.stereotype.Controller;
@@ -18,7 +17,7 @@ import java.util.Map;
 @Controller
 public class ProducerController {
 
-    private ProducerService producerService;
+    private final ProducerService producerService;
 
     private ProducerController(ProducerService producerService) {
         this.producerService = producerService;
@@ -37,17 +36,18 @@ public class ProducerController {
     /**
      * Удаление производителя с спользованием RequestParam
      * /admin/producer/edit?producerId=${producer.id}
+     *
      * @param producerId
      * @return
      */
     @GetMapping("/admin/producer/delete")
-    public String deleteProducer(@RequestParam Integer producerId){
+    public String deleteProducer(@RequestParam Integer producerId) {
         producerService.deleteProducer(producerId);
         return "redirect:/admin/producer/producers";
     }
 
     @GetMapping("/admin/producer/{producerId}/delete")
-    public String deleteProducer2(@PathVariable Integer producerId){
+    public String deleteProducer2(@PathVariable Integer producerId) {
         producerService.deleteProducer(producerId);
         return "redirect:/admin/producer/producers";
     }

@@ -2,9 +2,7 @@ package com.example.demo.web.admin.product;
 
 
 import com.example.demo.dao.ProductDao;
-
 import com.example.demo.model.Product;
-
 import com.example.demo.service.ProductService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,7 +20,7 @@ import java.util.Map;
 @Controller
 public class ProductController {
 
-    private ProductService productService;
+    private final ProductService productService;
 
     private ProductController(ProductService productService, ProductDao productDao) {
         this.productService = productService;
@@ -37,6 +35,7 @@ public class ProductController {
         return ("/admin/product/products");
 
     }
+
     @GetMapping("/admin/product/{productId}/delete")
     public String deleteProduct(@PathVariable Integer productId) {
         productService.deleteProduct(productId);
@@ -49,12 +48,14 @@ public class ProductController {
         model.addAttribute("product", new Product());
         return "admin/product/editproduct";
     }
+
     @GetMapping("/admin/product/{productId}/edit")
     public String showproductEdit(@PathVariable Integer productId, Model model) {
         Product product = productService.getProductById(productId);
         model.addAttribute("Product", product);
         return "admin/product/editproduct";
     }
+
     @PostMapping("/admin/product/{productId}/edit")
     public String saveproductEdit(
             @ModelAttribute Product product,
@@ -65,6 +66,7 @@ public class ProductController {
         productService.save(product);
         return "redirect:/admin/product/products";
     }
+
     @PostMapping("/admin/product/create")
     public String saveproductEdit(
             @ModelAttribute Product product) {

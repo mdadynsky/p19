@@ -19,14 +19,20 @@ public class ProductService {
         return productDao.getProducts();
     }
 
-    public List<Product> getProductList(){ return productDao.getProductList();}
+    public List<Product> getProductList() {
+        return productDao.getProductList();
+    }
 
-    public Product getProductById(Integer productId){ return  productDao.getProductbyId(productId);}
+    public Product getProductById(Integer productId) {
+        return productDao.getProductbyId(productId);
+    }
 
-    public void deleteProduct(Integer productId){productDao.deleteProduct(productId);}
+    public void deleteProduct(Integer productId) {
+        productDao.deleteProduct(productId);
+    }
 
-    public void save(Product product){
-        if(product.getId()==null)
+    public void save(Product product) {
+        if (product.getId() == null)
             productDao.insert(product);
         else
             productDao.update(product);

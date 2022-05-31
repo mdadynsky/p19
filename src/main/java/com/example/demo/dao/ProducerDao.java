@@ -23,7 +23,7 @@ public class ProducerDao extends BaseDao {
         return jdbcTemplate.query("select * from producer", new ProducerRowMapper());
     }
 
-    public Producer getProducerById(Integer producerId){
+    public Producer getProducerById(Integer producerId) {
         List<Producer> producers = jdbcTemplate.query(
                 "select * from producer where id = ?",
                 preparedStatement -> preparedStatement.setInt(1, producerId),
@@ -35,7 +35,7 @@ public class ProducerDao extends BaseDao {
         return producers.get(0);
     }
 
-    public Producer getProducerByName(String producerName){
+    public Producer getProducerByName(String producerName) {
         List<Producer> producers = jdbcTemplate.query(
                 "select * from producer where producerName = ?",
                 preparedStatement -> preparedStatement.setString(1, producerName),

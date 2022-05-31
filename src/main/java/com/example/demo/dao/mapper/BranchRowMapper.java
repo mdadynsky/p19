@@ -7,15 +7,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
-    public class BranchRowMapper implements RowMapper {
+public class BranchRowMapper implements RowMapper {
 
-        @Override
-        public Object mapRow(ResultSet rs, int rowNum) throws SQLException {
-            Branch branch = new Branch();
+    @Override
+    public Object mapRow(ResultSet rs, int rowNum) throws SQLException {
+        Branch branch = new Branch();
 
 
-            branch.setId(rs.getInt("id"));
-            branch.setBranchName(rs.getString("branchName"));
-            return branch;
-        }
+        branch.setId(rs.getInt("id"));
+        branch.setBranchName(rs.getString("branchName"));
+        return branch;
     }
+}

@@ -34,6 +34,16 @@
             </tr>
         </div>
         </tbody>
+        <tbody>
+        <#list poines as points>
+            <tr>
+                <td>${points.id}</td>
+                <td>${points.pointsName}</td>
+            </tr>
+        </#list>
+        </tbody>
     </table>
     <h1>Филиалы</h1>
+
+
 </@layout.layout>

@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -26,11 +25,12 @@ public class DeliveryController {
     }
 
     @GetMapping("/admin/delivery/delivery")
-    public String showDeliveryList(Model model){
+    public String showDeliveryList(Model model) {
         List<Delivery> delivery = deliveryService.getDeliveryList();
         model.addAttribute("delivery", delivery);
         return ("/admin/delivery/delivery");
     }
+
     @GetMapping("/admin/delivery/{deliveryId}/delete")
     public String deleteDelivery(@PathVariable Integer deliveryId) {
         deliveryService.deleteDelivery(deliveryId);

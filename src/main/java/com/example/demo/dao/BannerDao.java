@@ -1,6 +1,5 @@
 package com.example.demo.dao;
 
-import com.example.demo.dao.BaseDao;
 import com.example.demo.dao.mapper.BannerRowMapper;
 import com.example.demo.model.Banner;
 import org.springframework.jdbc.core.JdbcTemplate;

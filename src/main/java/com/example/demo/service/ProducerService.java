@@ -9,9 +9,9 @@ import java.util.Map;
 
 @Service
 public class ProducerService {
-    private ProducerDao producerDao;
+    private final ProducerDao producerDao;
 
-    public ProducerService(ProducerDao producerDao){
+    public ProducerService(ProducerDao producerDao) {
         this.producerDao = producerDao;
     }
 
@@ -23,15 +23,20 @@ public class ProducerService {
         return producerDao.getProducerList();
     }
 
-    public Producer getProducerById(Integer producerId) { return producerDao.getProducerById(producerId); }
+    public Producer getProducerById(Integer producerId) {
+        return producerDao.getProducerById(producerId);
+    }
 
-    public Producer getProducerByName(String producerName) { return producerDao.getProducerByName((producerName)); }
+    public Producer getProducerByName(String producerName) {
+        return producerDao.getProducerByName((producerName));
+    }
 
-    public void deleteProducer(Integer producerId) { producerDao.deleteProducer(producerId); }
+    public void deleteProducer(Integer producerId) {
+        producerDao.deleteProducer(producerId);
+    }
 
-    public void save(Producer producer)
-    {
-        if (producer.getId()==null)
+    public void save(Producer producer) {
+        if (producer.getId() == null)
             producerDao.insert(producer);
         else
             producerDao.update(producer);

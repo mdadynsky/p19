@@ -11,14 +11,14 @@ import java.util.List;
 @RequestMapping("/api/admin/delivery")
 public class DeliveryApiController {
 
-    private DeliveryService deliveryService;
+    private final DeliveryService deliveryService;
 
     public DeliveryApiController(DeliveryService deliveryService) {
         this.deliveryService = deliveryService;
     }
 
     @RequestMapping(value = "/delivery")
-    public List<Delivery> getDelivery(){
+    public List<Delivery> getDelivery() {
         return deliveryService.getDeliveryList();
     }
 }

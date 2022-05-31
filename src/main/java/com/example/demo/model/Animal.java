@@ -1,6 +1,6 @@
 package com.example.demo.model;
 
-public class Animal{
+public class Animal {
     public static final String SEX_MALE = "Male";
     public static final String SEX_FEMALE = "Female";
 

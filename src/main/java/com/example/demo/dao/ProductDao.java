@@ -1,12 +1,7 @@
 package com.example.demo.dao;
 
-import com.example.demo.dao.BaseDao;
 import com.example.demo.dao.mapper.ProductRowMapper;
-import com.example.demo.dao.mapper.PromoRowMapper;
-import com.example.demo.dao.mapper.UserRowMapper;
 import com.example.demo.model.Product;
-import com.example.demo.model.Promo;
-import com.example.demo.model.User;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 

@@ -19,6 +19,13 @@ values ('Для женщин');
 insert into category (category)
 values ('Для детей');
 
+insert into points (points)
+values ('Белово');
+insert into points (points)
+values ('Кемерово');
+insert into points (points)
+values ('Новокузнецк');
+
 insert into promo (promoName, promoDescription, promoPrice)
 values ('Кубик Рубика', 'Классическая головоломка, которую можно решить дома или в дороге.', '450.00 руб.');
 insert into promo (promoName, promoDescription, promoPrice)

@@ -11,18 +11,18 @@ import java.util.List;
 @RequestMapping("/api/admin/user")
 public class UserApiController {
 
-    private UserService userService;
+    private final UserService userService;
 
     public UserApiController(UserService userService) {
         this.userService = userService;
     }
 
     @RequestMapping(value = "/users")
-    public List<User> getUsers(){
+    public List<User> getUsers() {
         return userService.getUserList();
     }
 
-    public void animalTest(){
+    public void animalTest() {
         Cat cat1 = new Cat();
         cat1.setName("Shushpan");
         cat1.setAge(3);
@@ -48,7 +48,7 @@ public class UserApiController {
     }
 
     private void child(Animal animal) {
-        if (animal.getAge()<5) {
+        if (animal.getAge() < 5) {
             System.out.println("It's child");
         } else {
             System.out.println("It's adult");
