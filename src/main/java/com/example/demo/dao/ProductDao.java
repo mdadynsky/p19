@@ -5,6 +5,7 @@ import com.example.demo.model.Product;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 import java.util.Map;
 
@@ -55,6 +56,35 @@ public class ProductDao extends BaseDao {
                     preparedStatement.setString(2, product.getProductType());
                     preparedStatement.setString(3, product.getProductAge());
                     preparedStatement.setDouble(4, product.getProductCost());
+                });
+    }
+
+
+
+    public void saveRating(Integer productId, Integer rating) {
+        Integer ratingCount = jdbcTemplate.queryForObject("select ratingCount from product where id = "+productId, Integer.class);
+        Integer ratingCurrent = jdbcTemplate.queryForObject("select rating from product where id = "+productId, Integer.class);
+        if (ratingCurrent==null) ratingCurrent = 0;
+        ratingCount = ratingCount==null ? 1 : ratingCount + 1;
+
+        Integer ratingToSave = Math.round((ratingCurrent*(ratingCount-1)+rating)/(ratingCount));
+
+
+        /*
+        if (ratingCount==null)
+            ratingCount = 0;
+        else
+            ratingCount = ratingCount + 1;
+        */
+
+
+
+        Integer finalRatingCount = ratingCount;
+        jdbcTemplate.update("update product set rating =?, ratingCount=? where id =?",
+                preparedStatement -> {
+                    preparedStatement.setDouble(1, ratingToSave);
+                    preparedStatement.setInt(2, finalRatingCount);
+                    preparedStatement.setInt(3, productId);
                 });
     }
 

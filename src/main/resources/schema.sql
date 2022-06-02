@@ -48,7 +48,9 @@ create table product
     productAge  varchar(250) null,
     productType  varchar(250) not null,
     productProducer  varchar(250) not null,
-    productCost  double not null
+    productCost  double not null,
+    rating  int null,
+    ratingCount  int null
 );
 
 create table banner

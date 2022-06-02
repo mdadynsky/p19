@@ -89,7 +89,9 @@ public class ShoppingCartController {
     }
 
     @GetMapping("/shopping/rating.html")
-    public void setRating(Integer productId, Integer rating) {
-
+    @ResponseBody
+    public String setRating(Integer productId, Integer rating) {
+        productService.setRating(productId, rating);
+        return "ok";
     }
 }

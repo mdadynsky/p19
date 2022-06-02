@@ -10,6 +10,8 @@ public class Product implements Serializable {
     private String productType;
     private String producer;
     private Double productCost;
+    private Integer rating;
+    private Integer ratingCount;
 
     public Integer getId() {
         return id;
@@ -57,5 +59,21 @@ public class Product implements Serializable {
 
     public void setProducer(String producer) {
         this.producer = producer;
+    }
+
+    public Integer getRating() {
+        return rating;
+    }
+
+    public void setRating(Integer rating) {
+        this.rating = rating;
+    }
+
+    public Integer getRatingCount() {
+        return ratingCount;
+    }
+
+    public void setRatingCount(Integer ratingCount) {
+        this.ratingCount = ratingCount;
     }
 }

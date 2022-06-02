@@ -37,4 +37,8 @@ public class ProductService {
         else
             productDao.update(product);
     }
+
+    public void setRating(Integer productId, Integer newRating) {
+        productDao.saveRating(productId,newRating);
+    }
 }

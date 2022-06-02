@@ -12,6 +12,7 @@
             <th scope="col">Название</th>
             <th scope="col">Тип</th>
             <th scope="col">Рекомендуемый возраст</th>
+            <th scope="col">Рейтинг</th>
             <th scope="col">Цена</th>
         </tr>
         </thead>
@@ -26,6 +27,7 @@
             <td>${product.productName}</td>
             <td>${product.productType}</td>
             <td>${product.productAge}</td>
+            <td>${product.rating} / ${product.ratingCount}</td>
             <td>${product.productCost}</td>
 
 
