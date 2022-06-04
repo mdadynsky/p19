@@ -92,6 +92,7 @@
                                     </li>
                                     <li><a href="/admin/delivery/delivery" class="link-dark rounded">Список компаний по доставке</a>
                                     </li>
+                                    <li><a href="/admin/report/geoChat" class="link-dark rounded">Google chat</a></li>
                                     <li><a href="#" class="link-dark rounded">Profile</a></li>
                                     <li><a href="#" class="link-dark rounded">Settings</a></li>
                                     <li><a href="/logout.html" class="link-dark rounded">Выход</a></li>
