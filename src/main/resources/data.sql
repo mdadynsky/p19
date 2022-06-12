@@ -42,6 +42,18 @@ insert into banner (name)
 values ('свет мой зеркальце');
 
 
+insert into country (countryName)
+values ('Россия');
+insert into country (countryName)
+values ('Украина');
+insert into country (countryName)
+values ('Беларусь');
+insert into country (countryName)
+values ('США');
+insert into country (countryName)
+values ('Япония');
+
+
 insert into delivery (companyName)
 values ('Почта России');
 insert into delivery (companyName)

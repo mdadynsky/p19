@@ -88,6 +88,10 @@
                                     </li>
                                     <li><a href="/admin/producer/producers" class="link-dark rounded">Список производителей</a>
                                     </li>
+                                    <li><a href="/admin/country/create" class="link-dark rounded">Добавить страну</a>
+                                    </li>
+                                    <li><a href="/admin/country/country" class="link-dark rounded">Список стран</a>
+                                    </li>
                                     <li><a href="/admin/delivery/create" class="link-dark rounded">Добавить компании по доставке</a>
                                     </li>
                                     <li><a href="/admin/delivery/delivery" class="link-dark rounded">Список компаний по доставке</a>
