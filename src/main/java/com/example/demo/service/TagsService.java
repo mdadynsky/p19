@@ -21,4 +21,13 @@ public class TagsService {
     public void deleteTags(Integer tagId) {
         tagsDao.deleteTags(tagId);
     }
+    public Tags getTagById(Integer tagId) {
+        return tagsDao.getTagById(tagId);
+    }
+    public void save(Tags tag) {
+        if (tag.getId() == null)
+            tagsDao.insert(tag);
+        else
+            tagsDao.update(tag);
+    }
 }

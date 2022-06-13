@@ -7,7 +7,7 @@
     <table class="table">
         <thead>
         <tr>
-            <th><a href="#"><i class="bi bi-plus-square-fill"></i></a></th>
+            <th><a href="/admin/tags/create"><i class="bi bi-plus-square-fill"></i></a></th>
             <th scope="col">ID</th>
             <th scope="col">Тег</th>
         </tr>
@@ -16,7 +16,7 @@
         <#list tags as tag>
             <tr>
                 <td>
-                    <a href="#"><i class="bi bi-pencil-fill"></i></a>
+                    <a href="/admin/tags/${tag.id}/edit"><i class="bi bi-pencil-fill"></i></a>
                     <a href="#" onclick="isDelete(${tag.id});"><i class="bi bi-trash-fill delete"></i></a>
                 </td>
                 <td>${tag.id}</td>
