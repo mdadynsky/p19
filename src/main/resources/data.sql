@@ -41,6 +41,12 @@ insert into banner (name)
 insert into banner (name)
 values ('свет мой зеркальце');
 
+insert into tags (tagName)
+values ('Игрушки');
+insert into tags (tagName)
+values ('Хрупкий предмет');
+insert into tags (tagName)
+values ('Коллекционное издание');
 
 insert into delivery (companyName)
 values ('Почта России');

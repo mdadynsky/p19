@@ -7,7 +7,11 @@ create table user
     password varchar(250) not null,
     phone varchar(20) null
 );
-
+create table tags
+(
+    id       int auto_increment primary key,
+    tagName varchar(250) not null
+);
 create table category
 (
     id       int auto_increment primary key,
