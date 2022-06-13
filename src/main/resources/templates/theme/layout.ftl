@@ -91,6 +91,7 @@
                                     <li><a href="/admin/delivery/create" class="link-dark rounded">Добавить компании по доставке</a>
                                     </li>
                                     <li><a href="/admin/delivery/delivery" class="link-dark rounded">Список компаний по доставке</a>
+                                    <li><a href="/admin/tags/tags" class="link-dark rounded">Список тегов</a>
                                     </li>
                                     <li><a href="/admin/report/geoChat" class="link-dark rounded">Google chat</a></li>
                                     <li><a href="#" class="link-dark rounded">Profile</a></li>
