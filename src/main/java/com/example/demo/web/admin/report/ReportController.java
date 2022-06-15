@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
@@ -30,5 +31,14 @@ public class ReportController {
         return "admin/report/geoChat";
     }
 
+    @GetMapping("/admin/report/intervals")
+    public String intervals() {
+        return "admin/report/intervals";
+    }
+
+    @GetMapping("/admin/report/donut")
+    public String donut() {
+        return "admin/report/donut";
+    }
 
 }

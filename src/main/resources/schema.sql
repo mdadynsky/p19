@@ -7,7 +7,11 @@ create table user
     password varchar(250) not null,
     phone varchar(20) null
 );
-
+create table tags
+(
+    id       int auto_increment primary key,
+    tagName varchar(250) not null
+);
 create table category
 (
     id       int auto_increment primary key,
@@ -49,18 +53,26 @@ create table producer
 
 create table product
 (
-    id               int auto_increment primary key,
+    id              int auto_increment primary key,
     productName     varchar(250) not null,
-    productAge  varchar(250) null,
-    productType  varchar(250) not null,
-    productProducer  varchar(250) not null,
-    productCost  double not null,
-    rating  int null,
-    ratingCount  int null
+    productAge      varchar(250) null,
+    productType     varchar(250) not null,
+    productProducer varchar(250) not null,
+    productCost     double       not null,
+    rating          int null,
+    ratingCount     int null
 );
 
 create table banner
 (
-    id               int auto_increment primary key,
-    name             varchar(250) not null
+    id   int auto_increment primary key,
+    name varchar(250) not null
+);
+
+create table city
+(
+    id             int auto_increment primary key,
+    cityName       varchar(250) not null,
+    cityRegion     varchar(250) not null,
+    cityWarehouses int          not null
 );
