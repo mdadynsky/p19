@@ -84,17 +84,27 @@
                                     </li>
                                     <li><a href="/admin/promo/promo" class="link-dark rounded">Список промо-акций</a>
                                     </li>
-                                    <li><a href="/admin/producer/create" class="link-dark rounded">Добавить производителя</a>
+                                    <li><a href="/admin/producer/create" class="link-dark rounded">Добавить
+                                            производителя</a>
                                     </li>
-                                    <li><a href="/admin/producer/producers" class="link-dark rounded">Список производителей</a>
+                                    <li><a href="/admin/producer/producers" class="link-dark rounded">Список
+                                            производителей</a>
                                     </li>
-                                    <li><a href="/admin/country/create" class="link-dark rounded">Добавить страну</a>
+                                    <li><a href="/admin/delivery/create" class="link-dark rounded">Добавить компании по
+                                            доставке</a>
+                                    </li>
+                                    <li><a href="/admin/delivery/delivery" class="link-dark rounded">Список компаний по
+                                            доставке</a>
+									</li>
+									<li><a href="/admin/country/create" class="link-dark rounded">Добавить страну</a>
                                     </li>
                                     <li><a href="/admin/country/country" class="link-dark rounded">Список стран</a>
                                     </li>
-                                    <li><a href="/admin/delivery/create" class="link-dark rounded">Добавить компании по доставке</a>
+                                    <li><a href="/admin/tags/tags" class="link-dark rounded">Список тегов</a>
                                     </li>
-                                    <li><a href="/admin/delivery/delivery" class="link-dark rounded">Список компаний по доставке</a>
+                                    <li><a href="/admin/city/create" class="link-dark rounded">Добавить город</a>
+                                    </li>
+                                    <li><a href="/admin/city/city" class="link-dark rounded">Список городов</a>
                                     </li>
                                     <li><a href="/admin/report/geoChat" class="link-dark rounded">Google chat</a></li>
                                     <li><a href="#" class="link-dark rounded">Profile</a></li>
