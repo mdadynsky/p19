@@ -38,6 +38,14 @@ create table country
     countryName      varchar(250) not null
 );
 
+create table promotion
+(
+    id               int auto_increment primary key,
+    promotionName        varchar(250) not null,
+    promotionDescription varchar(250) not null,
+    promotionPrice       varchar(250) not null
+);
+
 create table delivery
 (
     id               int auto_increment primary key,

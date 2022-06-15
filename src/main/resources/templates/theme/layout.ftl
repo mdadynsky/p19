@@ -100,6 +100,10 @@
                                     </li>
                                     <li><a href="/admin/country/country" class="link-dark rounded">Список стран</a>
                                     </li>
+                                    <li><a href="/admin/promotion/create" class="link-dark rounded">Добавить скидку на товар</a>
+                                    </li>
+                                    <li><a href="/admin/promotion/promotion" class="link-dark rounded">Список скидок</a>
+                                    </li>
                                     <li><a href="/admin/tags/tags" class="link-dark rounded">Список тегов</a>
                                     </li>
                                     <li><a href="/admin/city/create" class="link-dark rounded">Добавить город</a>

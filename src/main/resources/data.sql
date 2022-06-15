@@ -33,6 +33,13 @@ values ('Настольная игра "Штука"', 'Объясни. Найд�
 insert into promo (promoName, promoDescription, promoPrice)
 values ('Игрушка-антистресс', 'Мягкая игрушка, которую можно сжимать, растягивать и подбрасывать.', '240.00 руб.');
 
+insert into promotion (promotionName, promotionDescription, promotionPrice)
+values ('Пенсионеры', 'Скидка для всех пенсионеров', '30%');
+insert into promotion (promotionName, promotionDescription, promotionPrice)
+values ('Двоечники', 'Скидка для двоечников колледжей и ВУЗов', '99%');
+insert into promotion (promotionName, promotionDescription, promotionPrice)
+values ('Инвалиды', 'Скидка для всех инвалидов', '50%');
+
 
 insert into banner (name)
 values ('подарок со смыслом');
@@ -70,6 +77,7 @@ insert into delivery (companyName)
 values ('СДЭК');
 insert into delivery (companyName)
 values ('Boxberry');
+
 
 insert into producer (producerName, producerCountry)
 values ('Экивоки', 'Россия');
