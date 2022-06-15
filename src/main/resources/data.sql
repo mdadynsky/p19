@@ -72,13 +72,20 @@ insert into product(productName, productAge,productType,productProducer,productC
 values ( 'Монополия','6','Семейные','Pinito',2500 );
 insert into product(productName, productAge,productType,productProducer,productCost)
 values ( 'Самокат 1','10','Самокаты','AccesStyle',34100 );
-insert into product(productName, productAge,productType,productProducer,productCost)
-values ( 'Самокат 2','16','Самокаты','Halten',24100 );
-insert into product(productName, productAge,productType,productProducer,productCost)
-values ( 'Самокат 3','16','Самокаты','Kugoo',54100 );
-insert into product(productName, productAge,productType,productProducer,productCost)
-values ( 'Самокат 4','16','Самокаты','Novatrack',64100 );
-insert into product(productName, productAge,productType,productProducer,productCost)
-values ( 'Самокат 5','16','Самокаты','Reactive',74100 );
-insert into product(productName, productAge,productType,productProducer,productCost)
-values ( 'Самокат 6','16','Самокаты','Thunderbird',75100 );
+insert into product(productName, productAge, productType, productProducer, productCost)
+values ('Самокат 2', '16', 'Самокаты', 'Halten', 24100);
+insert into product(productName, productAge, productType, productProducer, productCost)
+values ('Самокат 3', '16', 'Самокаты', 'Kugoo', 54100);
+insert into product(productName, productAge, productType, productProducer, productCost)
+values ('Самокат 4', '16', 'Самокаты', 'Novatrack', 64100);
+insert into product(productName, productAge, productType, productProducer, productCost)
+values ('Самокат 5', '16', 'Самокаты', 'Reactive', 74100);
+insert into product(productName, productAge, productType, productProducer, productCost)
+values ('Самокат 6', '16', 'Самокаты', 'Thunderbird', 75100);
+
+insert into city (cityName, cityRegion, cityWarehouses)
+values ('Новокузнецк', 'Кемеровская область', 1);
+insert into city (cityName, cityRegion, cityWarehouses)
+values ('Москва', 'Московская область', 7);
+insert into city (cityName, cityRegion, cityWarehouses)
+values ('Омск', 'Омская область', 2);
