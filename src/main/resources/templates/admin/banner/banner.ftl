@@ -24,5 +24,13 @@
     </table>
     </div>
 
+    <script>
+        function isDelete(bannerId) {
+            let isConf = confirm("Удалить запись?");
+            if (isConf) {
+                document.location.replace("/admin/banner/" + bannerId + "/delete");
+            }
+        }
+    </script>
 
 </@layout.layout>
