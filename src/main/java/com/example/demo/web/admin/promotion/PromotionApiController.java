@@ -1,4 +1,4 @@
-package com.example.demo.web.admin.promo;
+package com.example.demo.web.admin.promotion;
 
 import com.example.demo.model.Promotion;
 import com.example.demo.service.PromotionService;

@@ -20,8 +20,10 @@ create table category
 
 create table points
 (
-    id       int auto_increment primary key,
-    points   varchar(250) not null
+    id               int auto_increment primary key,
+    pointsName        varchar(250) not null,
+    pointsDescription varchar(250) not null,
+    pointsPrice       varchar(250) not null
 );
 
 create table promo

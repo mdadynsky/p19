@@ -14,7 +14,9 @@ public class PointsRowMapper implements RowMapper {
         Points points = new Points();
 
         points.setId(rs.getInt("id"));
-        points.setPointsName(rs.getString("points"));
+        points.setPointsName(rs.getString("pointsName"));
+        points.setPointsDescription(rs.getString("pointsDescription"));
+        points.setPointsPrice(rs.getString("pointsPrice"));
 
         return points;
     }

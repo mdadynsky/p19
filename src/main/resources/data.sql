@@ -19,12 +19,12 @@ values ('Для женщин');
 insert into category (category)
 values ('Для детей');
 
-insert into points (points)
-values ('Белово');
-insert into points (points)
-values ('Кемерово');
-insert into points (points)
-values ('Новокузнецк');
+insert into points (pointsName, pointsDescription, pointsPrice)
+values ('Новокузнецк', 'проспект Металлургов 21', '1500.00 руб.');
+insert into points (pointsName, pointsDescription, pointsPrice)
+values ('Новокузнецк', 'ул. Бардина 14', '900.00 руб.');
+insert into points (pointsName, pointsDescription, pointsPrice)
+values ('Новокузнецк', 'ул. Кутузова 34', '1100.00 руб.');
 
 insert into promo (promoName, promoDescription, promoPrice)
 values ('Кубик Рубика', 'Классическая головоломка, которую можно решить дома или в дороге.', '450.00 руб.');
