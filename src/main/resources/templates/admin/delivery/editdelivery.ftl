@@ -14,7 +14,7 @@
                     <form action="" method="post">
                         <div class="mb-3">
                             <label for="deliveryNameInput" class="form-label">Название компании</label>
-                            <input name="deliveryName" type="text" value="${delivery.companyName!''}" class="form-control"
+                            <input name="companyName" type="text" value="${delivery.companyName!''}" class="form-control"
                                    id="deliveryNameInput" placeholder="Введите название компании">
                         </div>
                         <div class="mb-3">
