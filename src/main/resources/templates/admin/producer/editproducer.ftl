@@ -24,6 +24,9 @@
                             <input class="btn btn-primary" type="submit" value="Сохранить">
                             <a class="btn btn-info" href="/admin/producer/producers">Отмена</a>
                         </div>
+                        <#if (_csrf.parameterName)??>
+                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                        </#if>
                     </form>
                 </div>
             </div>
