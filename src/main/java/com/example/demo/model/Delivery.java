@@ -1,6 +1,8 @@
 package com.example.demo.model;
 
-public class Delivery {
+import java.io.Serializable;
+
+public class Delivery implements Serializable {
     private Integer id;
     private String companyName;
 

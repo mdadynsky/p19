@@ -1,6 +1,8 @@
 package com.example.demo.model;
 
-public class Promotion {
+import java.io.Serializable;
+
+public class Promotion implements Serializable {
     private Integer id;
     private String promotionName;
     private String promotionDescription;

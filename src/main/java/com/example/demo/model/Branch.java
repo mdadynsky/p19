@@ -1,6 +1,8 @@
 package com.example.demo.model;
 
-public class Branch {
+import java.io.Serializable;
+
+public class Branch implements Serializable {
     private Integer id;
     private String branchName;
 

@@ -1,6 +1,8 @@
 package com.example.demo.model;
 
-public class Producer {
+import java.io.Serializable;
+
+public class Producer implements Serializable {
     private Integer id;
     private String producerName;
     private String producerCountry;

@@ -1,6 +1,8 @@
 package com.example.demo.model;
 
-public class City {
+import java.io.Serializable;
+
+public class City implements Serializable {
     private Integer id;
     private String cityName;
     private String cityRegion;

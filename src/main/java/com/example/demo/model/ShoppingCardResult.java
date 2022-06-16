@@ -1,6 +1,8 @@
 package com.example.demo.model;
 
-public class ShoppingCardResult {
+import java.io.Serializable;
+
+public class ShoppingCardResult implements Serializable {
     String result;
     String user;
     Integer count;

@@ -1,6 +1,8 @@
 package com.example.demo.model;
 
-public class Banner {
+import java.io.Serializable;
+
+public class Banner implements Serializable {
     private Integer id;
     private String bannerName;
 

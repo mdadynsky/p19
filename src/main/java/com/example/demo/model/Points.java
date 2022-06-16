@@ -1,6 +1,8 @@
 package com.example.demo.model;
 
-public class Points {
+import java.io.Serializable;
+
+public class Points implements Serializable {
     private Integer id;
     private String pointsName;
     private String pointsDescription;
