@@ -2,6 +2,8 @@ package com.example.demo.web.admin.promotion;
 
 import com.example.demo.model.Promotion;
 import com.example.demo.service.PromotionService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,12 +12,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
+
+
+
 /**
  * Спсиок скидок
  * Автор: Андрей Воронков
  */
 @Controller
 public class PromotionController {
+
+    Logger logger = LogManager.getLogger(PromotionController.class);
 
     private final PromotionService promotionService;
 
@@ -51,11 +58,12 @@ public class PromotionController {
     }
 
     @PostMapping("/admin/promotion/{promotionId}/edit")
-    public String savepromoEdit(
+    public String savePromoEdit(
             @ModelAttribute Promotion promotion,
             @PathVariable Integer promotionId) {
         promotion.setId(promotionId);
-        System.out.println("Сохранние пользователя " + promotionId);
+
+        logger.debug("Сохранние промокода");
 
         promotionService.save(promotion);
         return "redirect:/admin/promotion/promotion";
