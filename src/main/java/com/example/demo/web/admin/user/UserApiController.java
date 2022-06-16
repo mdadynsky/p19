@@ -23,6 +23,12 @@ public class UserApiController {
     }
 
     public void animalTest() {
+        String a1 = "stroka";
+
+        int a2 = 7;
+        Integer a3 = 7;
+
+
         Cat cat1 = new Cat();
         cat1.setName("Shushpan");
         cat1.setAge(3);
@@ -45,6 +51,9 @@ public class UserApiController {
         say(cat1);
         say(cat2);
         say(dog1);
+
+        Elephant e1 = new Elephant();
+        e1.countFoot()
     }
 
     private void child(Animal animal) {
