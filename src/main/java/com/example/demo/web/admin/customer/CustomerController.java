@@ -2,7 +2,7 @@ package com.example.demo.web.admin.customer;
 
 /**
  * Список покупателей
- * Автор: Георгий
+ * Автор: Георгий Тупиков
  */
 public class CustomerController {
 }
