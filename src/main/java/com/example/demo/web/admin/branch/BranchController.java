@@ -12,6 +12,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class BranchController {
     @GetMapping("/admin//branch/branch")
     public String showBranch() {
-        return ("/admin/branch/branch");
+        return ((("/admin/branch/branch")));
     }
 }

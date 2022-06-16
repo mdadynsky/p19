@@ -53,7 +53,7 @@ public class UserApiController {
         say(dog1);
 
         Elephant e1 = new Elephant();
-        e1.countFoot()
+        e1.countFoot();
     }
 
     private void child(Animal animal) {
