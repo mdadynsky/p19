@@ -40,6 +40,12 @@ values ('Двоечники', 'Скидка для двоечников колл
 insert into promotion (promotionName, promotionDescription, promotionPrice)
 values ('Инвалиды', 'Скидка для всех инвалидов', '50%');
 
+insert into gift (giftName, giftDescription, giftPrice)
+values ('Пенсионеры и ветераны', 'Скидка для всех пенсионеров и ветеранов', '60%');
+insert into gift (giftName, giftDescription, giftPrice)
+values ('Отличники', 'Скидка для отличников колледжей и ВУЗов', '80%');
+insert into gift (giftName, giftDescription, giftPrice)
+values ('Инвалиды', 'Скидка для всех инвалидов', '90');
 
 insert into banner (name)
 values ('подарок со смыслом');

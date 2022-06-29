@@ -48,6 +48,14 @@ create table promotion
     promotionPrice       varchar(250) not null
 );
 
+create table gift
+(
+    id               int auto_increment primary key,
+    giftName        varchar(250) not null,
+    giftDescription varchar(250) not null,
+    giftPrice       varchar(250) not null
+);
+
 create table delivery
 (
     id               int auto_increment primary key,
