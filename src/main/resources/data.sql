@@ -109,3 +109,15 @@ insert into city (cityName, cityRegion, cityWarehouses)
 values ('Москва', 'Московская область', 7);
 insert into city (cityName, cityRegion, cityWarehouses)
 values ('Омск', 'Омская область', 2);
+
+insert into level (levelName, levelTotalAmountOfPurchases)
+values ('Бронза', '200');
+insert into level (levelName, levelTotalAmountOfPurchases)
+values ('Серебро', '500');
+insert into level (levelName, levelTotalAmountOfPurchases)
+values ('Золото', '1000');
+insert into level (levelName, levelTotalAmountOfPurchases)
+values ('Платина', '5000');
+insert into level (levelName, levelTotalAmountOfPurchases)
+values ('Алмаз', '25000');
+

@@ -86,3 +86,10 @@ create table city
     cityRegion     varchar(250) not null,
     cityWarehouses int          not null
 );
+
+create table level
+(
+    id                                int auto_increment primary key,
+    levelName                         varchar(250) not null,
+    levelTotalAmountOfPurchases       int          not null
+);
