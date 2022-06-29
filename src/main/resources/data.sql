@@ -121,3 +121,10 @@ values ('Платина', '5000');
 insert into level (levelName, levelTotalAmountOfPurchases)
 values ('Алмаз', '25000');
 
+insert into promoCode (promoCodeName, promoCodeDiscount, promoCodeNumbers)
+values ('Летний', '2', 'tt5fs');
+insert into promoCode (promoCodeName, promoCodeDiscount, promoCodeNumbers)
+values ('Праздничный', '3', 'holiday');
+insert into promoCode (promoCodeName, promoCodeDiscount, promoCodeNumbers)
+values ('Спорт', '1', 'sports2022');
+

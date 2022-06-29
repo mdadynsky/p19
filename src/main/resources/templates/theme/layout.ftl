@@ -118,6 +118,10 @@
                                     </li>
                                     <li><a href="/admin/level/level" class="link-dark rounded">Список уровней покупателей</a>
                                     </li>
+                                    <li><a href="/admin/promocode/create" class="link-dark rounded">Добавить промокод</a>
+                                    </li>
+                                    <li><a href="/admin/promocode/promocode" class="link-dark rounded">Список промокодов</a>
+                                    </li>
                                     <li><a href="/admin/report/geoChat" class="link-dark rounded">Google chat</a></li>
                                     <li><a href="#" class="link-dark rounded">Profile</a></li>
                                     <li><a href="#" class="link-dark rounded">Settings</a></li>

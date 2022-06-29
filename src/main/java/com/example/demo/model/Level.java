@@ -5,7 +5,6 @@ import java.io.Serializable;
 public class Level implements Serializable {
     private Integer id;
     private String levelName;
-    private String levelDescription;
     private Integer levelTotalAmountOfPurchases;
 
 
