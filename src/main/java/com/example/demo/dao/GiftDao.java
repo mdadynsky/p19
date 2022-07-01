@@ -49,7 +49,7 @@ public class GiftDao extends BaseDao {
 
     public void insert(Gift promotion) {
         jdbcTemplate.update(
-                "insert into promotion (promotionname, promotiondescription, promotionprice) values (?,?,?)",
+                "insert into gift (giftname, giftdescription, giftprice) values (?,?,?)",
                 preparedStatement -> {
                     preparedStatement.setString(1, promotion.getGiftName());
                     preparedStatement.setString(2, promotion.getGiftDescription());
