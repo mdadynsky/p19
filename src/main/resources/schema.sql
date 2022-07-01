@@ -94,3 +94,18 @@ create table city
     cityRegion     varchar(250) not null,
     cityWarehouses int          not null
 );
+
+create table level
+(
+    id                                int auto_increment primary key,
+    levelName                         varchar(250) not null,
+    levelTotalAmountOfPurchases       int          not null
+);
+
+create table promoCode
+(
+    id                  int auto_increment primary key,
+    promoCodeName       varchar(250) not null,
+    promoCodeDiscount   int          not null,
+    promoCodeNumbers    varchar(250) not null
+);
