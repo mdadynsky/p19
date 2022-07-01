@@ -47,6 +47,7 @@ values ('Отличники', 'Скидка для отличников колл
 insert into gift (giftName, giftDescription, giftPrice)
 values ('Инвалиды', 'Скидка для всех инвалидов', '90');
 
+
 insert into banner (name)
 values ('подарок со смыслом');
 insert into banner (name)
