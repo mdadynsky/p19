@@ -76,3 +76,4 @@ public class GiftController {
         return "redirect:/admin/gift/gift";
     }
 }
+.

@@ -20,3 +20,4 @@ public class GiftRowMapper implements RowMapper {
         return gift;
     }
 }
+.

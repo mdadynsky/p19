@@ -41,3 +41,4 @@ public class Gift implements Serializable {
         this.giftPrice = giftPrice;
     }
 }
+.
